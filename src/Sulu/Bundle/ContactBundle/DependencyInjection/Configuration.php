@@ -116,6 +116,13 @@ class Configuration implements ConfigurationInterface
                                 ->scalarNode('repository')->defaultValue('Sulu\Bundle\ContactBundle\Entity\ContactRepository')->end()
                             ->end()
                         ->end()
+						->arrayNode('account')
+                            ->addDefaultsIfNotSet()
+                            ->children()
+                                ->scalarNode('model')->defaultValue('Sulu\Bundle\ContactBundle\Entity\Account')->end()
+                                ->scalarNode('repository')->defaultValue('Sulu\Bundle\ContactBundle\Entity\AccountRepository')->end()
+                            ->end()
+                        ->end()
                     ->end()
                 ->end()
             ->end();

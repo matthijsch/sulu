@@ -29,6 +29,7 @@ class SuluContactBundle extends Bundle
         $this->buildPersistence(
             [
                 'Sulu\Component\Contact\Model\ContactInterface' => 'sulu.model.contact.class',
+				'Sulu\Component\Contact\Model\AccountInterface' => 'sulu.model.account.class',
             ],
             $container
         );
